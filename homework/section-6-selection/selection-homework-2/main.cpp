@@ -6,15 +6,24 @@ void problem_1() {
   int num, result;
 
   cin >> result;
-  cin >> num; if (num > result) result = num;
-  cin >> num; if (num > result) result = num;
-  cin >> num; if (num > result) result = num;
-  cin >> num; if (num > result) result = num;
-  cin >> num; if (num > result) result = num;
-  cin >> num; if (num > result) result = num;
-  cin >> num; if (num > result) result = num;
-  cin >> num; if (num > result) result = num;
-  cin >> num; if (num > result) result = num;
+  cin >> num;
+  if (num > result) result = num;
+  cin >> num;
+  if (num > result) result = num;
+  cin >> num;
+  if (num > result) result = num;
+  cin >> num;
+  if (num > result) result = num;
+  cin >> num;
+  if (num > result) result = num;
+  cin >> num;
+  if (num > result) result = num;
+  cin >> num;
+  if (num > result) result = num;
+  cin >> num;
+  if (num > result) result = num;
+  cin >> num;
+  if (num > result) result = num;
 
   cout << result << '\n';
 }
@@ -24,10 +33,9 @@ void problem_1_for_loop() {
   int num, result;
 
   cin >> result;
-  for (int i = 0; i < 10-1; i++) {
+  for (int i = 0; i < 10 - 1; i++) {
     cin >> num;
-    if (num > result)
-      result = num;
+    if (num > result) result = num;
   }
 
   cout << result << '\n';
@@ -38,16 +46,26 @@ void problem_2() {
   int num, result, counter;
 
   cin >> counter;
-  cin >> result; counter--;
-  if (counter-- > 0) cin >> num; if (num > result) result = num;
-  if (counter-- > 0) cin >> num; if (num > result) result = num;
-  if (counter-- > 0) cin >> num; if (num > result) result = num;
-  if (counter-- > 0) cin >> num; if (num > result) result = num;
-  if (counter-- > 0) cin >> num; if (num > result) result = num;
-  if (counter-- > 0) cin >> num; if (num > result) result = num;
-  if (counter-- > 0) cin >> num; if (num > result) result = num;
-  if (counter-- > 0) cin >> num; if (num > result) result = num;
-  if (counter-- > 0) cin >> num; if (num > result) result = num;
+  cin >> result;
+  counter--;
+  if (counter-- > 0) cin >> num;
+  if (num > result) result = num;
+  if (counter-- > 0) cin >> num;
+  if (num > result) result = num;
+  if (counter-- > 0) cin >> num;
+  if (num > result) result = num;
+  if (counter-- > 0) cin >> num;
+  if (num > result) result = num;
+  if (counter-- > 0) cin >> num;
+  if (num > result) result = num;
+  if (counter-- > 0) cin >> num;
+  if (num > result) result = num;
+  if (counter-- > 0) cin >> num;
+  if (num > result) result = num;
+  if (counter-- > 0) cin >> num;
+  if (num > result) result = num;
+  if (counter-- > 0) cin >> num;
+  if (num > result) result = num;
 
   cout << result << '\n';
 }
@@ -57,11 +75,11 @@ void problem_2_while_loop() {
   int num, result, counter;
 
   cin >> counter;
-  cin >> result; counter--;
-  while(counter--) {
+  cin >> result;
+  counter--;
+  while (counter--) {
     cin >> num;
-    if (num > result)
-      result = num;
+    if (num > result) result = num;
   }
 
   cout << result << '\n';

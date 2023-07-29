@@ -16,6 +16,10 @@ void problem_1() {
   int reminder = num % 10;
   bool is_even3 = reminder == 0 || reminder == 2 || reminder == 4 ||
                   reminder == 6 || reminder == 8;
+
+  cout << "is_even1: " << is_even1 << endl;
+  cout << "is_even2: " << is_even2 << endl;
+  cout << "is_even3: " << is_even3 << endl;
 }
 
 void problem_2() {

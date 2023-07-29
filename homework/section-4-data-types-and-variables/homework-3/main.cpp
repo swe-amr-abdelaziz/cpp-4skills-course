@@ -20,8 +20,8 @@ void problem_2() {
   int a, b;
   cin >> a >> b;
 
-  int coeff = 0.5 * (b + 1);
-  int result = (a * a) * coeff + (2 * a + 1) * (1 - coeff);
+  double coeff = 0.5 * (b + 1);
+  double result = (a * a) * coeff + (2 * a + 1) * (1 - coeff);
   cout << result << endl;
 }
 

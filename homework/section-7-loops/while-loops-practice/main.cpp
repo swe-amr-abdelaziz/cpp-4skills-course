@@ -53,7 +53,7 @@ void problem_3_with_regex() {
 
   regex integer_expr("(\\+|-)?[[:digit:]]+");
   if (regex_match(num, integer_expr)) {
-    int count = num.size();
+    size_t count = num.size();
     if (num[0] == '+' || num[0] == '-') count--;
     cout << "Number: " << temp_num << " has " << count << " digits\n";
   } else {

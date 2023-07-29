@@ -4,13 +4,14 @@ using namespace std;
 
 string toLowerCase(string str) {
   string result = "";
-  int tweak, pos = 0;
+  int tweak;
+  size_t pos = 0;
   while (str[pos] != '\0') {
     tweak = 0;
     if (str[pos] >= 65 && str[pos] <= 90) {
       tweak = 32;
     }
-    result += (str[pos] + tweak);
+    result += (str[pos] + (char)tweak);
     pos++;
   }
   return result;

@@ -16,7 +16,7 @@ void problem_1() {
   cout << (a > 5 && d < 30) << "\n";   // T && F = F
   cout << (a <= b && b <= c) << "\n";  // T && T = T
 
-  cout << (a > 5 && d < 30 || c - b == 10) << "\n";
+  cout << ((a > 5 && d < 30) || c - b == 10) << "\n";
   /*
    * (a > 5 && d < 30 || 10 == 10)
    * T && F || T
@@ -29,27 +29,27 @@ void problem_1() {
    * T
    */
 
-  cout << (a > 5 && d < 30 || c > d || d % 2 == 0) << "\n";
+  cout << ((a > 5 && d < 30) || c > d || d % 2 == 0) << "\n";
   /*
    * T && F || F || T
    * F || F || T
    * T
    */
 
-  cout << (a > 5 && d < 30 || c > d && d % 2 == 0) << "\n";
+  cout << ((a > 5 && d < 30) || (c > d && d % 2 == 0)) << "\n";
   /*
    * T && F || F && whatever
    * F || F
    * F
    */
 
-  cout << (a == 10 || b != 20 && c != 30 || d != 40) << "\n";
+  cout << (a == 10 || (b != 20 && c != 30) || d != 40) << "\n";
   /*
    * T || whatever
    * T
    */
 
-  cout << ((a == 10 || b != 20) && c != 30 || d != 40) << "\n";
+  cout << (((a == 10 || b != 20) && c != 30) || d != 40) << "\n";
   /*
    * (T || whatever) && F || F
    * T && F || F
@@ -89,7 +89,7 @@ void problem_2() {
   cout << (ng <= 30) << endl;
 
   // nb > 20 and nt > 2 or ng > 30 and nt > 4
-  cout << (nb > 20 && nt > 2 || ng > 30 && nt > 4) << endl;
+  cout << ((nb > 20 && nt > 2) || (ng > 30 && nt > 4)) << endl;
 
   // Either nb < 60 or ng < 70
   cout << (nb < 60 || ng < 70) << endl;
@@ -127,35 +127,35 @@ void problem_3() {
    * F || T
    * T
    */
-  cout << (T && T && F && T || T && T) << endl;
+  cout << ((T && T && F && T) || (T && T)) << endl;
 
   /*
    * T && T && T && T || T && (T || F)
    * T || whatever
    * T
    */
-  cout << (T && T && T && T || T && (T || F)) << endl;
+  cout << ((T && T && T && T) || (T && (T || F))) << endl;
 
   /*
    * T && T && T || T && (F || (T && (T && T)))
    * T || whatever
    * T
    */
-  cout << (T && T && T || T && (F || (T && (T && T)))) << endl;
+  cout << ((T && T && T) || (T && (F || (T && (T && T))))) << endl;
 
   /*
    * T && T || T && F && T || T && T && F || (T && (T || F))
    * T || whatever
    * T
    */
-  cout << (T && T || T && F && T || T && T && F || (T && (T || F))) << endl;
+  cout << ((T && T) || (T && F && T) || (T && T && F) || (T && (T || F))) << endl;
 
   /*
    * T && T || T && F && T || (T && T && F || (T && (T || F)))
    * T || whatever
    * T
    */
-  cout << (T && T || T && F && T || (T && T && F || (T && (T || F)))) << endl;
+  cout << ((T && T) || (T && F && T) || ((T && T && F) || (T && (T || F)))) << endl;
 
   /*
    * (T && T || T && F && T || T) && T && F || (T && (T || F))
@@ -164,14 +164,14 @@ void problem_3() {
    * F || T
    * T
    */
-  cout << ((T && T || T && F && T || T) && T && F || (T && (T || F))) << endl;
+  cout << ((((T && T) || (T && F && T) || T) && T && F) || (T && (T || F))) << endl;
 
   /*
    * T && T || T && (F && T || T && T) && F || (T && (T || F))
    * T || whatever
    * T
    */
-  cout << (T && T || T && (F && T || T && T) && F || (T && (T || F))) << endl;
+  cout << ((T && T) || (T && ((F && T) || (T && T)) && F) || (T && (T || F))) << endl;
 
   /*
    * Output:
