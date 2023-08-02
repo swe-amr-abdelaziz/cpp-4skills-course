@@ -37,7 +37,9 @@ void problem_1() {
     }
   }
 
-  if (n) cout << max << ' ' << second_max << '\n';
+  if (n) {
+    cout << max << ' ' << second_max << '\n';
+  }
 }
 
 void problem_2() {
@@ -76,7 +78,9 @@ void problem_2() {
     }
   }
 
-  if (n) cout << arr[max_idx] << ' ' << arr[second_max_idx] << '\n';
+  if (n) {
+    cout << arr[max_idx] << ' ' << arr[second_max_idx] << '\n';
+  }
 }
 
 int main() {
