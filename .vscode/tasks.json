@@ -2,7 +2,7 @@
   "tasks": [
     {
       "type": "cppbuild",
-      "label": "C/C++: g++ build one active file",
+      "label": "Build/Test Single File",
       "command": "/usr/bin/g++",
       "args": [
         "-fdiagnostics-color=always",
@@ -16,6 +16,9 @@
         "-Werror",
         "-std=c++20",
         "${file}",
+        "-lgtest",
+        "-lgtest_main",
+        "-pthread",
         "-o",
         "${fileDirname}/${fileBasenameNoExtension}"
       ],
@@ -29,11 +32,44 @@
         "kind": "build",
         "isDefault": true
       },
-      "detail": "Task to build single .cpp file"
+      "detail": "Task to build/test single .cpp file"
     },
     {
       "type": "cppbuild",
-      "label": "C/C++: g++ build multiple files",
+      "label": "Build/Test Single File with src Folder",
+      "command": "/usr/bin/g++",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "-pedantic-errors",
+        "-Wall",
+        "-Weffc++",
+        "-Wextra",
+        "-Wconversion",
+        "-Wsign-conversion",
+        "-Werror",
+        "-std=c++20",
+        "${file}",
+        "${fileDirname}/src/*.cpp",
+        "${fileDirname}/src/*.h",
+        "-lgtest",
+        "-lgtest_main",
+        "-pthread",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build",
+      "detail": "Task to build/test single .cpp file with src folder"
+    },
+    {
+      "type": "cppbuild",
+      "label": "Build/Test Multiple Files",
       "command": "/usr/bin/g++",
       "args": [
         "-fdiagnostics-color=always",
@@ -49,7 +85,10 @@
         "${fileDirname}/*.cpp",
         "${fileDirname}/*.h",
         "${fileDirname}/src/*.cpp",
-        "${fileDirname}/include/*.h",
+        "${fileDirname}/src/*.h",
+        "-lgtest",
+        "-lgtest_main",
+        "-pthread",
         "-o",
         "${fileDirname}/${fileBasenameNoExtension}"
       ],
@@ -59,11 +98,8 @@
       "problemMatcher": [
         "$gcc"
       ],
-      "group": {
-        "kind": "build",
-        "isDefault": false
-      },
-      "detail": "Task to build multiple .cpp and .h files"
+      "group": "build",
+      "detail": "Task to build multiple .cpp and .h files and test whole project"
     }
   ],
   "version": "2.0.0"
