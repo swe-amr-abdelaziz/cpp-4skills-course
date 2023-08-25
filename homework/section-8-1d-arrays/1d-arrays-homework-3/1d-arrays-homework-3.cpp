@@ -360,14 +360,14 @@ void problem_5_1_loop() {
 }
 
 int main() {
-  // problem_1();
-  // problem_2();
-  // problem_2_accumulation();
-  // problem_3();
-  // problem_3_optimized_1();
-  // problem_3_optimized_2();
-  // problem_4();
-  // problem_4_optimized();
+  problem_1();
+  problem_2();
+  problem_2_accumulation();
+  problem_3();
+  problem_3_optimized_1();
+  problem_3_optimized_2();
+  problem_4();
+  problem_4_optimized();
   problem_5_3_nested_loops();
   problem_5_2_nested_loops();
   problem_5_1_loop();
