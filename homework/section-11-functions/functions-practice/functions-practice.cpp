@@ -68,9 +68,11 @@ int main() {
 }
 
 void printMenu() {
-  cout << "1) Add new employee\n2) Print "
-          "all employees\n3) "
-          "Delete by age\n4) Update Salary by name\n5) Exit\n";
+  cout << "1) Add new employee\n"
+          "2) Print all employees\n"
+          "3) Delete by age\n"
+          "4) Update Salary by name\n"
+          "5) Exit\n";
 }
 
 void getlineInput(string &str, string inputName) {
