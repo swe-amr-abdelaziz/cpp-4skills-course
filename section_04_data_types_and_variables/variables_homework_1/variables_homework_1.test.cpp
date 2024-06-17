@@ -113,3 +113,8 @@ TEST(Problem3Test, given_8_integers_output_sum_of_even_and_odd_places_numbers_3)
     EXPECT_EQ(output, "17 -17");
 }
 
+int main(int argc, char** argv)
+{
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
