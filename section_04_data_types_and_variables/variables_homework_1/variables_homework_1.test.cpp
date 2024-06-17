@@ -63,3 +63,35 @@ TEST(Problem1Test, input_negative_negative_numbers_output_basic_math_operations)
               "-12 * -3 = 36\n");
 }
 
+TEST(Problem2Test, print_students_data_with_average_grades_1)
+{
+    string output = getFunctionOutput(problem_2, "mostafa 111 20 ALI 555 30");
+    EXPECT_EQ(output,
+              "What is student 1 name: "
+              "His id: "
+              "His math exam grade: "
+              "What is student 2 name: "
+              "His id: "
+              "His math exam grade: "
+              "Students grades in math\n"
+              "mostafa (with id 111) got grade: 20\n"
+              "ALI (with id 555) got grade: 30\n"
+              "Average grade is 25\n");
+}
+
+TEST(Problem2Test, print_students_data_with_average_grades_2)
+{
+    string output = getFunctionOutput(problem_2, "Amr 2 21 Mohamed 3 24");
+    EXPECT_EQ(output,
+              "What is student 1 name: "
+              "His id: "
+              "His math exam grade: "
+              "What is student 2 name: "
+              "His id: "
+              "His math exam grade: "
+              "Students grades in math\n"
+              "Amr (with id 2) got grade: 21\n"
+              "Mohamed (with id 3) got grade: 24\n"
+              "Average grade is 22.5\n");
+}
+
