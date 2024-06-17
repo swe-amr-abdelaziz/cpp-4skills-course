@@ -40,3 +40,10 @@ void problem_2()
     cout << "Average grade is " << (grade1 + grade2) / 2 << "\n";
 }
 
+void problem_3()
+{
+    // Even and Odd sum
+    int even1, even2, even3, even4, odd1, odd2, odd3, odd4;
+    cin >> odd1 >> even1 >> odd2 >> even2 >> odd3 >> even3 >> odd4 >> even4;
+    cout << even1 + even2 + even3 + even4 << " " << odd1 + odd2 + odd3 + odd4;
+}
