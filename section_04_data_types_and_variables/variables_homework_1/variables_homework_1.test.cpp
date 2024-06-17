@@ -95,3 +95,21 @@ TEST(Problem2Test, print_students_data_with_average_grades_2)
               "Average grade is 22.5\n");
 }
 
+TEST(Problem3Test, given_8_integers_output_sum_of_even_and_odd_places_numbers_1)
+{
+    string output = getFunctionOutput(problem_3, "11 2 7 9 12 -8 3 -1");
+    EXPECT_EQ(output, "2 33");
+}
+
+TEST(Problem3Test, given_8_integers_output_sum_of_even_and_odd_places_numbers_2)
+{
+    string output = getFunctionOutput(problem_3, "20 7 -2 12 -42 32 -18 -22");
+    EXPECT_EQ(output, "29 -42");
+}
+
+TEST(Problem3Test, given_8_integers_output_sum_of_even_and_odd_places_numbers_3)
+{
+    string output = getFunctionOutput(problem_3, "8 -14 -30 26 -4 -6 9 11");
+    EXPECT_EQ(output, "17 -17");
+}
+
