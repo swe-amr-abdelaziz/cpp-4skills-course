@@ -29,3 +29,15 @@ TEST(Problem1Test, guess_the_output)
               "55\n");
 }
 
+TEST(Problem2Test, given_2_similar_numbers_then_swaps_them)
+{
+    string output = getFunctionOutput(problem_2, "1 1");
+    EXPECT_EQ(output, "1 1\n");
+}
+
+TEST(Problem2Test, given_2_different_numbers_then_swaps_them)
+{
+    string output = getFunctionOutput(problem_2, "7 231");
+    EXPECT_EQ(output, "231 7\n");
+}
+
