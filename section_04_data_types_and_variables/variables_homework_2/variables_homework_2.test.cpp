@@ -41,3 +41,8 @@ TEST(Problem2Test, given_2_different_numbers_then_swaps_them)
     EXPECT_EQ(output, "231 7\n");
 }
 
+int main(int argc, char** argv)
+{
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
