@@ -2,6 +2,22 @@
 #include <gtest/gtest.h>
 using namespace std;
 
+TEST(Homework1Test, guess_the_runtime_output)
+{
+    testing::internal::CaptureStdout();
+    homework_1();
+    string result = testing::internal::GetCapturedStdout();
+    EXPECT_EQ(result,
+              "\n\n"
+              "Guess the output\n"
+              "---\n"
+              "25\n"
+              "14/2\n"
+              "7\n"
+              "endl\n"
+              "Practice makes perfect");
+}
+
 TEST(Homework2Test, outputs_right_triangle_stars)
 {
     testing::internal::CaptureStdout();

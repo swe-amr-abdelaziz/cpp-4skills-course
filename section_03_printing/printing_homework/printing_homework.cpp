@@ -1,17 +1,24 @@
 #include <iostream>
 using namespace std;
 
-// Homework #1: Guess the run-time output
-/*
- *
- * Guess the output
- * ---
- * 25
- * 14/2
- * 7
- * endl
- * Practice makes perfect
- */
+void homework_1()
+{
+    cout << "\n\nGuess the "
+         << "output\n---\n";
+
+    cout << 10 + 20 - 5 << endl;
+    cout << "14/2"
+         << "\n";
+    cout << 17 - 10 << "\n";
+    cout << "endl";
+    cout << "\nPractice makes perfect";
+
+    // cout<<"The way to get started is to quit talking and begin doing";
+
+    return;
+
+    cout << "\n\nBye\n\n";
+}
 
 void homework_2()
 {
