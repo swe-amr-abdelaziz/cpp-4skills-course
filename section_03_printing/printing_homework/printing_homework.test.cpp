@@ -23,7 +23,12 @@ TEST(Homework2Test, outputs_right_triangle_stars)
     testing::internal::CaptureStdout();
     homework_2();
     string result = testing::internal::GetCapturedStdout();
-    EXPECT_EQ(result, "*\n* *\n* * *\n* * * *\n* * * * *\n");
+    EXPECT_EQ(result,
+              "*\n"
+              "* *\n"
+              "* * *\n"
+              "* * * *\n"
+              "* * * * *\n");
 }
 
 TEST(Homework3Test, outputs_acute_triangle_stars)
@@ -32,8 +37,11 @@ TEST(Homework3Test, outputs_acute_triangle_stars)
     homework_3();
     string result = testing::internal::GetCapturedStdout();
     EXPECT_EQ(result,
-              "        *        \n      * * *      \n    * * * * *    \n "
-              " * * * * * * *  \n* * * * * * * * *\n");
+              "        *        \n"
+              "      * * *      \n"
+              "    * * * * *    \n"
+              "  * * * * * * *  \n"
+              "* * * * * * * * *\n");
 }
 
 TEST(Homework4Test, outputs_diamond_stars)
@@ -42,10 +50,15 @@ TEST(Homework4Test, outputs_diamond_stars)
     homework_4();
     string result = testing::internal::GetCapturedStdout();
     EXPECT_EQ(result,
-              "        *        \n      * * *      \n    * * * * *    \n "
-              " * * * * * * *  \n* * * * * * * * *\n  * * * * * * *  \n    * * "
-              "* * *    "
-              "\n      * * *      \n        *        \n");
+              "        *        \n"
+              "      * * *      \n"
+              "    * * * * *    \n"
+              "  * * * * * * *  \n"
+              "* * * * * * * * *\n"
+              "  * * * * * * *  \n"
+              "    * * * * *    \n"
+              "      * * *      \n"
+              "        *        \n");
 }
 
 TEST(Homework5Test, find_all_errors_and_fix_them)
