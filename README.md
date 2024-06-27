@@ -9,3 +9,4 @@ In this repository, I upload homework and project solutions for the <a href="htt
 - Compile code manually using g++ and Makefile, without relying on IDEs
 - Use clang-format as a C++ linter
 - Follow best practices for using Git, with better commits and more organized branches
+- Use Docker to generate image for C++ development and CI/CD pipeline <a href="https://hub.docker.com/repository/docker/amrswe/cpp-utils" target="_blank">image link</a>
