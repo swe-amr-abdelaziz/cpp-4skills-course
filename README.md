@@ -10,3 +10,11 @@ In this repository, I upload homework and project solutions for the <a href="htt
 - Use clang-format as a C++ linter
 - Follow best practices for using Git, with better commits and more organized branches
 - Use Docker to generate image for C++ development and CI/CD pipeline <a href="https://hub.docker.com/repository/docker/amrswe/cpp-utils" target="_blank">image link</a>
+- Use Github Actions (CI/CD Pipeline), steps include:
+    - Check naming conventions
+    - Check code formatting
+    - Static analysis with Cppcheck
+    - Build project
+    - Run unit tests
+    - Run memory leak checks
+    - Generate code coverage

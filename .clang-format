@@ -9,9 +9,9 @@ AlignAfterOpenBracket: Align
 AlignConsecutiveAssignments: true
 AlignEscapedNewlinesLeft: true
 AlignOperands: true
-AlignTrailingComments: Always
+AlignTrailingComments: true
 AllowAllParametersOfDeclarationOnNextLine: false
-AllowShortBlocksOnASingleLine: Always
+AllowShortBlocksOnASingleLine: true
 AllowShortCaseLabelsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: Empty
 AllowShortIfStatementsOnASingleLine: false
