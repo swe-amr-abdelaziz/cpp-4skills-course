@@ -73,3 +73,44 @@ TEST(Problem2Test, input_b_is_positive_one_test_case_3)
     EXPECT_EQ(output, "1000000");
 }
 
+TEST(Problem3Test, sum_numbers_from_1_to_1)
+{
+    string output = getFunctionOutput(problem_3, "1");
+    EXPECT_EQ(output, "1");
+}
+
+TEST(Problem3Test, sum_numbers_from_1_to_3)
+{
+    string output = getFunctionOutput(problem_3, "3");
+    EXPECT_EQ(output, "6");
+}
+
+TEST(Problem3Test, sum_numbers_from_1_to_4)
+{
+    string output = getFunctionOutput(problem_3, "4");
+    EXPECT_EQ(output, "10");
+}
+
+TEST(Problem3Test, sum_numbers_from_1_to_5)
+{
+    string output = getFunctionOutput(problem_3, "5");
+    EXPECT_EQ(output, "15");
+}
+
+TEST(Problem3Test, sum_numbers_from_1_to_100)
+{
+    string output = getFunctionOutput(problem_3, "100");
+    EXPECT_EQ(output, "5050");
+}
+
+TEST(Problem3Test, sum_numbers_from_1_to_max_possible_value_before_overflow)
+{
+    string output = getFunctionOutput(problem_3, "65535");
+    EXPECT_EQ(output, "2147450880");
+}
+
+TEST(Problem3Test, sum_numbers_from_1_to_max_possible_value_before_overflow_plus_one)
+{
+    string output = getFunctionOutput(problem_3, "65536");
+    EXPECT_NE(output, "2147516416");
+}
