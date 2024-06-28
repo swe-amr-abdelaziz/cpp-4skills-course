@@ -1,0 +1,47 @@
+name: Run CI Operations
+
+on:
+  [push, pull_request]:
+    branches: [master]
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    container:
+      image: amrswe/cpp-utils
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check naming conventions
+        run: ./scripts/naming_convention_check.sh
+
+      - name: Check code formatting
+        run: ./scripts/code_formatting_check.sh
+
+      - name: Static analysis with cppcheck
+        run: cppcheck --enable=all --inconclusive --check-config --xml --xml-version=2 --suppress=missingIncludeSystem . 2> cppcheck.xml
+
+      - name: Upload cppcheck.xml
+        uses: actions/upload-artifact@v4
+        with:
+          name: cppcheck
+          path: cppcheck.xml
+
+      - name: Build project
+        run: ./scripts/build.sh
+
+      - name: Run unit tests
+        run: ./scripts/run_unit_tests.sh
+
+      - name: Run memory leak checks
+        run: ./scripts/memory_leak_check.sh
+
+      - name: Generate code coverage
+        run: ./scripts/code_coverage.sh
+
+      - name: Upload code coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: code_coverage_report
+          path: coverage/*
