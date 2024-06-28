@@ -18,3 +18,4 @@ In this repository, I upload homework and project solutions for the <a href="htt
     - Run unit tests
     - Run memory leak checks
     - Generate code coverage
+
