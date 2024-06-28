@@ -17,6 +17,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Give execute permission to scripts
+        run: chmod +x ./scripts/*.sh
+
       - name: Check naming conventions
         run: ./scripts/naming_convention_check.sh
 
