@@ -31,3 +31,11 @@ void problem_2()
     cout << formula1 + formula2;
 }
 
+void problem_3()
+{
+    // Sum numbers from 1 to N
+    long n;
+    cin >> n;
+    int result = (int) (n * (n + 1) / 2);
+    cout << result;
+}
