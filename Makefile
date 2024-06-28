@@ -83,6 +83,6 @@ clean-objs:
 clean-ccov:
 	@rm -f *.gcda *.gcno
 
-.PHONY: all build-main build-test run-main run-test run-memory-leak-check clean-build clean-objs test
 test: build-test run-test clean-build clean-ccov
 
+.PHONY: all build-main build-test run-main run-test run-memory-leak-check clean-build clean-ccov clean-objs test
