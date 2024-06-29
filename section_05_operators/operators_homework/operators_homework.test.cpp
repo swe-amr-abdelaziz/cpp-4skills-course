@@ -15,3 +15,11 @@ TEST(Problem1Test, guess_program_output)
               "2\n");
 }
 
+TEST(Problem2Test, guess_program_output)
+{
+    testing::internal::CaptureStdout();
+    problem_2();
+    string result = testing::internal::GetCapturedStdout();
+    EXPECT_EQ(result, "8\n");
+}
+
