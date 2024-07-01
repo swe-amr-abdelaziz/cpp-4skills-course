@@ -3,6 +3,7 @@ using namespace std;
 
 void problem_1()
 {
+    // Guess Program Output
     int a = 0, b = 1;
 
     cout << a++ << "\n"; // a = 1, b = 1
@@ -22,6 +23,7 @@ void problem_1()
 
 void problem_2()
 {
+    // Guess Program Output
     int a = 1, b = 1, c;
 
     cout << (c = a + b,
@@ -41,6 +43,7 @@ void problem_2()
 
 void problem_3()
 {
+    // Guess Program Output
     int a = 210;
 
     a /= 2; // a = 105
