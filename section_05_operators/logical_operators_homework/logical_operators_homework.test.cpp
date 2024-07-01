@@ -74,3 +74,18 @@ TEST(Homework2Test, create_logic_test_case_3)
               "1\n");
 }
 
+TEST(Homework3Test, simplify_expressions)
+{
+    testing::internal::CaptureStdout();
+    homework_3();
+    string result = testing::internal::GetCapturedStdout();
+    EXPECT_EQ(result,
+              "0\n"
+              "1\n"
+              "1\n"
+              "1\n"
+              "1\n"
+              "1\n"
+              "1\n"
+              "1\n");
+}
