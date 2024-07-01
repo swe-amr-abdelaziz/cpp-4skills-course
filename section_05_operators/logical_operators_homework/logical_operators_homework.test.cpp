@@ -32,3 +32,45 @@ TEST(Homework1Test, guess_program_output)
               "0\n");
 }
 
+TEST(Homework2Test, create_logic_test_case_1)
+{
+    string output = getFunctionOutput(homework_2, "25 30 2");
+    EXPECT_EQ(output,
+              "0\n"
+              "1\n"
+              "0\n"
+              "1\n"
+              "1\n"
+              "0\n"
+              "0\n"
+              "0\n");
+}
+
+TEST(Homework2Test, create_logic_test_case_2)
+{
+    string output = getFunctionOutput(homework_2, "45 35 4");
+    EXPECT_EQ(output,
+              "1\n"
+              "0\n"
+              "1\n"
+              "1\n"
+              "1\n"
+              "1\n"
+              "0\n"
+              "1\n");
+}
+
+TEST(Homework2Test, create_logic_test_case_3)
+{
+    string output = getFunctionOutput(homework_2, "30 45 6");
+    EXPECT_EQ(output,
+              "1\n"
+              "0\n"
+              "1\n"
+              "1\n"
+              "1\n"
+              "0\n"
+              "1\n"
+              "1\n");
+}
+
