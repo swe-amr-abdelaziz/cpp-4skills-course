@@ -29,3 +29,11 @@ void problem_2()
     cout << c - (int) c;
 }
 
+void problem_3()
+{
+    // Our Reminder
+    int a, b;
+    cin >> a >> b;
+
+    cout << a - (a / b) * b;
+}
