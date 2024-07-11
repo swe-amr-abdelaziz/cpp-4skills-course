@@ -50,3 +50,24 @@ TEST(Problem1Test, averages_test_case_4)
     runProblem1Tests("0 20 4 8 2", {6.8, 2.4, 1.6});
 }
 
+TEST(Problem2Test, fractional_part_test_case_1)
+{
+    string output = getFunctionOutput(problem_2, "201 25");
+    double actual = stod(output);
+    EXPECT_DOUBLE_EQ(actual, 0.04);
+}
+
+TEST(Problem2Test, fractional_part_test_case_2)
+{
+    string output = getFunctionOutput(problem_2, "200 25");
+    double actual = stod(output);
+    EXPECT_DOUBLE_EQ(actual, 0);
+}
+
+TEST(Problem2Test, fractional_part_test_case_3)
+{
+    string output = getFunctionOutput(problem_2, "17 4");
+    double actual = stod(output);
+    EXPECT_DOUBLE_EQ(actual, 0.25);
+}
+
