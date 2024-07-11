@@ -71,3 +71,23 @@ TEST(Problem2Test, fractional_part_test_case_3)
     EXPECT_DOUBLE_EQ(actual, 0.25);
 }
 
+TEST(Problem3Test, our_reminder_test_case_1)
+{
+    string output = getFunctionOutput(problem_3, "27 12");
+    int actual    = stoi(output);
+    EXPECT_EQ(actual, 3);
+}
+
+TEST(Problem3Test, our_reminder_test_case_2)
+{
+    string output = getFunctionOutput(problem_3, "27 5");
+    int actual    = stoi(output);
+    EXPECT_EQ(actual, 2);
+}
+
+TEST(Problem3Test, our_reminder_test_case_3)
+{
+    string output = getFunctionOutput(problem_3, "201 25");
+    int actual    = stoi(output);
+    EXPECT_EQ(actual, 1);
+}
