@@ -7,7 +7,7 @@ In this repository, I upload homework and project solutions for the <a href="htt
 - Learn best practices for C++
 - Implement Test-Driven Development (TDD)
 - Compile code manually using g++ and Makefile, without relying on IDEs
-- Use clang-format as a C++ linter
+- Use clang-format as a C++ formatter
 - Follow best practices for using Git, with better commits and more organized branches
 - Use Docker to generate image for C++ development and CI/CD pipeline <a href="https://hub.docker.com/repository/docker/amrswe/cpp-utils" target="_blank">image link</a>
 - Use Github Actions (CI/CD Pipeline), steps include:
