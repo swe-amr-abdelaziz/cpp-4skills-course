@@ -19,3 +19,13 @@ void problem_1()
     cout << avg1 / avg2 << "\n";
 }
 
+void problem_2()
+{
+    // Fractional Part
+    double a, b;
+    cin >> a >> b;
+
+    double c = a / b;
+    cout << c - (int) c;
+}
+
