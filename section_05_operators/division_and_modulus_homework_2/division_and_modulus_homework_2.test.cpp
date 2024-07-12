@@ -44,3 +44,33 @@ TEST(Problem1Test, is_even_way_1_given_odd_numbers_then_false)
     EXPECT_EQ(actual, 0);
 }
 
+TEST(Problem1Test, is_even_way_2_given_even_numbers_then_true)
+{
+    int actual;
+    actual = stoi(getFunctionOutput(problem_1_way_2, "0"));
+    EXPECT_EQ(actual, 1);
+    actual = stoi(getFunctionOutput(problem_1_way_2, "2"));
+    EXPECT_EQ(actual, 1);
+    actual = stoi(getFunctionOutput(problem_1_way_2, "4"));
+    EXPECT_EQ(actual, 1);
+    actual = stoi(getFunctionOutput(problem_1_way_2, "6"));
+    EXPECT_EQ(actual, 1);
+    actual = stoi(getFunctionOutput(problem_1_way_2, "8"));
+    EXPECT_EQ(actual, 1);
+}
+
+TEST(Problem1Test, is_even_way_2_given_odd_numbers_then_false)
+{
+    int actual;
+    actual = stoi(getFunctionOutput(problem_1_way_2, "1"));
+    EXPECT_EQ(actual, 0);
+    actual = stoi(getFunctionOutput(problem_1_way_2, "3"));
+    EXPECT_EQ(actual, 0);
+    actual = stoi(getFunctionOutput(problem_1_way_2, "5"));
+    EXPECT_EQ(actual, 0);
+    actual = stoi(getFunctionOutput(problem_1_way_2, "7"));
+    EXPECT_EQ(actual, 0);
+    actual = stoi(getFunctionOutput(problem_1_way_2, "9"));
+    EXPECT_EQ(actual, 0);
+}
+
