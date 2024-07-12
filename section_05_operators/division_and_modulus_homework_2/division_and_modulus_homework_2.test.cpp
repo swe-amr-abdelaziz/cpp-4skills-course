@@ -104,3 +104,63 @@ TEST(Problem1Test, is_even_way_3_given_odd_numbers_then_false)
     EXPECT_EQ(actual, 0);
 }
 
+TEST(Problem2Test, last_3_digits_sum_test_case_1)
+{
+    int actual = stoi(getFunctionOutput(problem_2, "0"));
+    EXPECT_EQ(actual, 0);
+}
+
+TEST(Problem2Test, last_3_digits_sum_test_case_2)
+{
+    int actual = stoi(getFunctionOutput(problem_2, "1"));
+    EXPECT_EQ(actual, 1);
+}
+
+TEST(Problem2Test, last_3_digits_sum_test_case_3)
+{
+    int actual = stoi(getFunctionOutput(problem_2, "15"));
+    EXPECT_EQ(actual, 6);
+}
+
+TEST(Problem2Test, last_3_digits_sum_test_case_4)
+{
+    int actual = stoi(getFunctionOutput(problem_2, "105"));
+    EXPECT_EQ(actual, 6);
+}
+
+TEST(Problem2Test, last_3_digits_sum_test_case_5)
+{
+    int actual = stoi(getFunctionOutput(problem_2, "125"));
+    EXPECT_EQ(actual, 8);
+}
+
+TEST(Problem2Test, last_3_digits_sum_test_case_6)
+{
+    int actual = stoi(getFunctionOutput(problem_2, "1000"));
+    EXPECT_EQ(actual, 0);
+}
+
+TEST(Problem2Test, last_3_digits_sum_test_case_7)
+{
+    int actual = stoi(getFunctionOutput(problem_2, "1001"));
+    EXPECT_EQ(actual, 1);
+}
+
+TEST(Problem2Test, last_3_digits_sum_test_case_8)
+{
+    int actual = stoi(getFunctionOutput(problem_2, "1234"));
+    EXPECT_EQ(actual, 9);
+}
+
+TEST(Problem2Test, last_3_digits_sum_test_case_9)
+{
+    int actual = stoi(getFunctionOutput(problem_2, "99999"));
+    EXPECT_EQ(actual, 27);
+}
+
+TEST(Problem2Test, last_3_digits_sum_test_case_10)
+{
+    int actual = stoi(getFunctionOutput(problem_2, "0001"));
+    EXPECT_EQ(actual, 1);
+}
+
