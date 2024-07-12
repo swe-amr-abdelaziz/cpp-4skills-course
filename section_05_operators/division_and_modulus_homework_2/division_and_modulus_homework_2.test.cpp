@@ -164,3 +164,62 @@ TEST(Problem2Test, last_3_digits_sum_test_case_10)
     EXPECT_EQ(actual, 1);
 }
 
+TEST(Problem3Test, _4th_digits_from_the_end_test_case_1)
+{
+    int actual = stoi(getFunctionOutput(problem_3, "0"));
+    EXPECT_EQ(actual, 0);
+}
+
+TEST(Problem3Test, _4th_digits_from_the_end_test_case_2)
+{
+    int actual = stoi(getFunctionOutput(problem_3, "1"));
+    EXPECT_EQ(actual, 0);
+}
+
+TEST(Problem3Test, _4th_digits_from_the_end_test_case_3)
+{
+    int actual = stoi(getFunctionOutput(problem_3, "15"));
+    EXPECT_EQ(actual, 0);
+}
+
+TEST(Problem3Test, _4th_digits_from_the_end_test_case_4)
+{
+    int actual = stoi(getFunctionOutput(problem_3, "125"));
+    EXPECT_EQ(actual, 0);
+}
+
+TEST(Problem3Test, _4th_digits_from_the_end_test_case_5)
+{
+    int actual = stoi(getFunctionOutput(problem_3, "1000"));
+    EXPECT_EQ(actual, 1);
+}
+
+TEST(Problem3Test, _4th_digits_from_the_end_test_case_6)
+{
+    int actual = stoi(getFunctionOutput(problem_3, "5001"));
+    EXPECT_EQ(actual, 5);
+}
+
+TEST(Problem3Test, _4th_digits_from_the_end_test_case_7)
+{
+    int actual = stoi(getFunctionOutput(problem_3, "1234"));
+    EXPECT_EQ(actual, 1);
+}
+
+TEST(Problem3Test, _4th_digits_from_the_end_test_case_8)
+{
+    int actual = stoi(getFunctionOutput(problem_3, "654321"));
+    EXPECT_EQ(actual, 4);
+}
+
+TEST(Problem3Test, _4th_digits_from_the_end_test_case_9)
+{
+    int actual = stoi(getFunctionOutput(problem_3, "99999"));
+    EXPECT_EQ(actual, 9);
+}
+
+TEST(Problem3Test, _4th_digits_from_the_end_test_case_10)
+{
+    int actual = stoi(getFunctionOutput(problem_3, "0001"));
+    EXPECT_EQ(actual, 0);
+}
