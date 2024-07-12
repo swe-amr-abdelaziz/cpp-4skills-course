@@ -33,3 +33,16 @@ void problem_1_way_3()
     cout << is_even;
 }
 
+void problem_2()
+{
+    // Last 3 digits sum
+    int num;
+    int sum{0};
+    cin >> num;
+
+    sum += num % 10, num /= 10;
+    sum += num % 10, num /= 10;
+    sum += num % 10, num /= 10;
+    cout << sum;
+}
+
