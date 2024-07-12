@@ -22,3 +22,14 @@ void problem_1_way_2()
     cout << is_even;
 }
 
+void problem_1_way_3()
+{
+    // Is even? way 3
+    int num;
+    cin >> num;
+
+    int rem      = num % 10;
+    bool is_even = rem == 0 || rem == 2 || rem == 4 || rem == 6 || rem == 8;
+    cout << is_even;
+}
+
