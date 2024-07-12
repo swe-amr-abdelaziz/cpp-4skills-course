@@ -14,3 +14,33 @@ string getFunctionOutput(void (*func)(), string input)
     return testing::internal::GetCapturedStdout();
 }
 
+TEST(Problem1Test, is_even_way_1_given_even_numbers_then_true)
+{
+    int actual;
+    actual = stoi(getFunctionOutput(problem_1_way_1, "0"));
+    EXPECT_EQ(actual, 1);
+    actual = stoi(getFunctionOutput(problem_1_way_1, "2"));
+    EXPECT_EQ(actual, 1);
+    actual = stoi(getFunctionOutput(problem_1_way_1, "4"));
+    EXPECT_EQ(actual, 1);
+    actual = stoi(getFunctionOutput(problem_1_way_1, "6"));
+    EXPECT_EQ(actual, 1);
+    actual = stoi(getFunctionOutput(problem_1_way_1, "8"));
+    EXPECT_EQ(actual, 1);
+}
+
+TEST(Problem1Test, is_even_way_1_given_odd_numbers_then_false)
+{
+    int actual;
+    actual = stoi(getFunctionOutput(problem_1_way_1, "1"));
+    EXPECT_EQ(actual, 0);
+    actual = stoi(getFunctionOutput(problem_1_way_1, "3"));
+    EXPECT_EQ(actual, 0);
+    actual = stoi(getFunctionOutput(problem_1_way_1, "5"));
+    EXPECT_EQ(actual, 0);
+    actual = stoi(getFunctionOutput(problem_1_way_1, "7"));
+    EXPECT_EQ(actual, 0);
+    actual = stoi(getFunctionOutput(problem_1_way_1, "9"));
+    EXPECT_EQ(actual, 0);
+}
+
