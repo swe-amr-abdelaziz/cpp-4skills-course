@@ -46,3 +46,12 @@ void problem_2()
     cout << sum;
 }
 
+void problem_3()
+{
+    // 4th digits from the end
+    int num;
+    cin >> num;
+
+    num /= 1000;
+    cout << num % 10;
+}
