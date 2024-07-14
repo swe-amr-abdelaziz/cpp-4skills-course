@@ -29,3 +29,15 @@ vector<T> getFunctionOutputSplitted(void (*func)(), string input, char delimiter
     return vec;
 }
 
+TEST(Problem1Test, _100_or_7_given_even_number_then_print_100)
+{
+    int actual = stoi(getFunctionOutput(problem_1, "8"));
+    EXPECT_EQ(actual, 100);
+}
+
+TEST(Problem1Test, _100_or_7_given_odd_number_then_print_7)
+{
+    int actual = stoi(getFunctionOutput(problem_1, "133"));
+    EXPECT_EQ(actual, 7);
+}
+
