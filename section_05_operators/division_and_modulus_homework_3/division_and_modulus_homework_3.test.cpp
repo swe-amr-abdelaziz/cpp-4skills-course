@@ -1,8 +1,8 @@
+#include "division_and_modulus_homework_3.h"
 #include <gtest/gtest.h>
 #include <sstream>
 #include <string>
 #include <vector>
-#include "division_and_modulus_homework_3.h"
 using namespace std;
 
 string getFunctionOutput(void (*func)(), string input)
@@ -15,7 +15,7 @@ string getFunctionOutput(void (*func)(), string input)
     return testing::internal::GetCapturedStdout();
 }
 
-template<typename T>
+template <typename T>
 vector<T> getFunctionOutputSplitted(void (*func)(), string input, char delimiter = '\n')
 {
     string output = getFunctionOutput(func, input);
