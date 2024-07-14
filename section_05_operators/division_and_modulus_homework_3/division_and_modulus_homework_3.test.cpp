@@ -15,3 +15,17 @@ string getFunctionOutput(void (*func)(), string input)
     return testing::internal::GetCapturedStdout();
 }
 
+template<typename T>
+vector<T> getFunctionOutputSplitted(void (*func)(), string input, char delimiter = '\n')
+{
+    string output = getFunctionOutput(func, input);
+    istringstream buffer(output);
+    string str;
+    vector<T> vec = {};
+    while (getline(buffer, str, delimiter))
+    {
+        vec.push_back(str.c_str());
+    }
+    return vec;
+}
+
