@@ -92,3 +92,21 @@ TEST(Problem1Test, given_two_numbers_and_invalid_sign_inbetween)
     EXPECT_EQ(output, "Invalid operation");
 }
 
+TEST(Problem2Test, given_two_numbers_then_print_minimum_test_case_1)
+{
+    int output = stoi(getFunctionOutput(problem_2, "10 20"));
+    EXPECT_EQ(output, 10);
+}
+
+TEST(Problem2Test, given_two_numbers_then_print_minimum_test_case_2)
+{
+    int output = stoi(getFunctionOutput(problem_2, "70 5"));
+    EXPECT_EQ(output, 5);
+}
+
+TEST(Problem2Test, given_two_numbers_then_print_minimum_test_case_3)
+{
+    int output = stoi(getFunctionOutput(problem_2, "20 20"));
+    EXPECT_EQ(output, 20);
+}
+
