@@ -146,3 +146,63 @@ TEST(Problem3Test, given_three_numbers_then_print_minimum_test_case_6)
     EXPECT_EQ(output, 1);
 }
 
+TEST(Problem4Test, given_zero_then_print_zero)
+{
+    int output = stoi(getFunctionOutput(problem_4, "0"));
+    EXPECT_EQ(output, 0);
+}
+
+TEST(Problem4Test, given_999_then_print_99)
+{
+    int output = stoi(getFunctionOutput(problem_4, "999"));
+    EXPECT_EQ(output, 99);
+}
+
+TEST(Problem4Test, given_1000_then_print_0)
+{
+    int output = stoi(getFunctionOutput(problem_4, "1000"));
+    EXPECT_EQ(output, 0);
+}
+
+TEST(Problem4Test, given_1001_then_print_1)
+{
+    int output = stoi(getFunctionOutput(problem_4, "1001"));
+    EXPECT_EQ(output, 1001);
+}
+
+TEST(Problem4Test, given_999999_then_print_9)
+{
+    int output = stoi(getFunctionOutput(problem_4, "999999"));
+    EXPECT_EQ(output, 9999);
+}
+
+TEST(Problem4Test, given_1000000_then_print_0)
+{
+    int output = stoi(getFunctionOutput(problem_4, "1000000"));
+    EXPECT_EQ(output, 0);
+}
+
+TEST(Problem4Test, given_1000001_then_print_minus_1000001)
+{
+    int output = stoi(getFunctionOutput(problem_4, "1000001"));
+    EXPECT_EQ(output, -1000001);
+}
+
+TEST(Problem4Test, given_234_then_print_4)
+{
+    int output = stoi(getFunctionOutput(problem_4, "234"));
+    EXPECT_EQ(output, 4);
+}
+
+TEST(Problem4Test, given_157_then_print_57)
+{
+    int output = stoi(getFunctionOutput(problem_4, "157"));
+    EXPECT_EQ(output, 57);
+}
+
+TEST(Problem4Test, given_567169_then_print_7169)
+{
+    int output = stoi(getFunctionOutput(problem_4, "567169"));
+    EXPECT_EQ(output, 7169);
+}
+
