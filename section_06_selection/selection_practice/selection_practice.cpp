@@ -51,3 +51,22 @@ void problem_3()
     cout << result;
 }
 
+void problem_4()
+{
+    // Is even? Print digits
+    int num;
+    cin >> num;
+
+    if (num % 2 == 0)
+        cout << num % 10;
+    else
+    {
+        if (num < 1000)
+            cout << num % 100;
+        else if (num < 1000000)
+            cout << num % 10000;
+        else
+            cout << -num;
+    }
+}
+
