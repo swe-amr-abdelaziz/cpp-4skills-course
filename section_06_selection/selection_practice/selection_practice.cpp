@@ -20,3 +20,18 @@ void problem_1()
     else
         cout << "Invalid operation";
 }
+
+void problem_2()
+{
+    // Minimum of 2 numbers
+    int num1, num2, result;
+
+    cin >> num1 >> num2;
+
+    result = num1;
+    if (num2 < result)
+        result = num2;
+
+    cout << result;
+}
+
