@@ -110,3 +110,39 @@ TEST(Problem2Test, given_two_numbers_then_print_minimum_test_case_3)
     EXPECT_EQ(output, 20);
 }
 
+TEST(Problem3Test, given_three_numbers_then_print_minimum_test_case_1)
+{
+    int output = stoi(getFunctionOutput(problem_3, "10 20 30"));
+    EXPECT_EQ(output, 10);
+}
+
+TEST(Problem3Test, given_three_numbers_then_print_minimum_test_case_2)
+{
+    int output = stoi(getFunctionOutput(problem_3, "70 5 15"));
+    EXPECT_EQ(output, 5);
+}
+
+TEST(Problem3Test, given_three_numbers_then_print_minimum_test_case_3)
+{
+    int output = stoi(getFunctionOutput(problem_3, "30 20 15"));
+    EXPECT_EQ(output, 15);
+}
+
+TEST(Problem3Test, given_three_numbers_then_print_minimum_test_case_4)
+{
+    int output = stoi(getFunctionOutput(problem_3, "30 10 10"));
+    EXPECT_EQ(output, 10);
+}
+
+TEST(Problem3Test, given_three_numbers_then_print_minimum_test_case_5)
+{
+    int output = stoi(getFunctionOutput(problem_3, "10 30 30"));
+    EXPECT_EQ(output, 10);
+}
+
+TEST(Problem3Test, given_three_numbers_then_print_minimum_test_case_6)
+{
+    int output = stoi(getFunctionOutput(problem_3, "1 1 1"));
+    EXPECT_EQ(output, 1);
+}
+
