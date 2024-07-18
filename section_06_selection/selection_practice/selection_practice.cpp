@@ -70,3 +70,32 @@ void problem_4()
     }
 }
 
+void problem_5()
+{
+    // Last 3 digits!
+    int num;
+    cin >> num;
+
+    if (num < 10000)
+        cout << "this is a small number";
+    else
+    {
+        int digit1 = num % 10;
+        num /= 10;
+        int digit2 = num % 10;
+        num /= 10;
+        int digit3 = num % 10;
+
+        bool isSumOdd = (digit1 + digit2 + digit3) % 2 != 0;
+        if (isSumOdd)
+            cout << "this is a great number";
+        else
+        {
+            // Better approach using while loop
+            if (digit1 % 2 != 0 || digit2 % 2 != 0 || digit3 % 2 != 0)
+                cout << "this is a good number";
+            else
+                cout << "this is a bad number";
+        }
+    }
+}
