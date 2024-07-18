@@ -206,3 +206,62 @@ TEST(Problem4Test, given_567169_then_print_7169)
     EXPECT_EQ(output, 7169);
 }
 
+TEST(Problem5Test, given_zero_then_print_small_number_msg)
+{
+    string output = getFunctionOutput(problem_5, "0");
+    EXPECT_EQ(output, "this is a small number");
+}
+
+TEST(Problem5Test, given_9999_then_print_small_number_msg)
+{
+    string output = getFunctionOutput(problem_5, "9999");
+    EXPECT_EQ(output, "this is a small number");
+}
+
+TEST(Problem5Test, given_10001_then_print_great_number_msg)
+{
+    string output = getFunctionOutput(problem_5, "10001");
+    EXPECT_EQ(output, "this is a great number");
+}
+
+TEST(Problem5Test, given_10011_then_print_good_number_msg)
+{
+    string output = getFunctionOutput(problem_5, "10011");
+    EXPECT_EQ(output, "this is a good number");
+}
+
+TEST(Problem5Test, given_10000_then_print_bad_number_msg)
+{
+    string output = getFunctionOutput(problem_5, "10000");
+    EXPECT_EQ(output, "this is a bad number");
+}
+
+TEST(Problem5Test, given_100_then_print_small_number_msg)
+{
+    string output = getFunctionOutput(problem_5, "100");
+    EXPECT_EQ(output, "this is a small number");
+}
+
+TEST(Problem5Test, given_10111_then_print_great_number_msg)
+{
+    string output = getFunctionOutput(problem_5, "10111");
+    EXPECT_EQ(output, "this is a great number");
+}
+
+TEST(Problem5Test, given_10330_then_print_good_number_msg)
+{
+    string output = getFunctionOutput(problem_5, "10330");
+    EXPECT_EQ(output, "this is a good number");
+}
+
+TEST(Problem5Test, given_10303_then_print_good_number_msg)
+{
+    string output = getFunctionOutput(problem_5, "10303");
+    EXPECT_EQ(output, "this is a good number");
+}
+
+TEST(Problem5Test, given_10033_then_print_good_number_msg)
+{
+    string output = getFunctionOutput(problem_5, "10033");
+    EXPECT_EQ(output, "this is a good number");
+}
