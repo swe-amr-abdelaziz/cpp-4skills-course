@@ -35,3 +35,19 @@ void problem_2()
     cout << result;
 }
 
+void problem_3()
+{
+    // Minimum of 3 numbers
+    int num1, num2, num3, result;
+
+    cin >> num1 >> num2 >> num3;
+
+    result = num1;
+    if (num2 < result)
+        result = num2;
+    if (num3 < result)
+        result = num3;
+
+    cout << result;
+}
+
