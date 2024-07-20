@@ -74,3 +74,33 @@ TEST(Problem2Test, given_3_integers_then_print_them_ordered_ascending_test_case_
     EXPECT_EQ(output, "1 2 3");
 }
 
+TEST(Problem3Test, given_3_integers_all_less_than_100_then_print_max_among_all)
+{
+    int output = stoi(getFunctionOutput(problem3, "10 30 20"));
+    EXPECT_EQ(output, 30);
+}
+
+TEST(Problem3Test, given_3_integers_2_of_them_less_than_100_then_print_max_among_2_integers)
+{
+    int output = stoi(getFunctionOutput(problem3, "22 90 115"));
+    EXPECT_EQ(output, 90);
+}
+
+TEST(Problem3Test, given_3_integers_1_of_them_less_than_100_then_print_that_integer)
+{
+    int output = stoi(getFunctionOutput(problem3, "50 100 150"));
+    EXPECT_EQ(output, 50);
+}
+
+TEST(Problem3Test, given_3_integers_no_one_is_less_than_100_then_print_minus_1)
+{
+    int output = stoi(getFunctionOutput(problem3, "200 300 400"));
+    EXPECT_EQ(output, -1);
+}
+
+TEST(Problem3Test, given_3_negative_integers_than_print_max_among_all)
+{
+    int output = stoi(getFunctionOutput(problem3, "-10 -30 -20"));
+    EXPECT_EQ(output, -10);
+}
+
