@@ -79,3 +79,24 @@ void problem3()
     cout << result;
 }
 
+void problem4()
+{
+    // Conditional Count
+    int x, a, b, c, d, e;
+    cin >> x >> a >> b >> c >> d >> e;
+
+    int greaterThanXCount{0};
+
+    if (a > x)
+        greaterThanXCount++;
+    if (b > x)
+        greaterThanXCount++;
+    if (c > x)
+        greaterThanXCount++;
+    if (d > x)
+        greaterThanXCount++;
+    if (e > x)
+        greaterThanXCount++;
+
+    cout << (5 - greaterThanXCount) << " " << greaterThanXCount;
+}
