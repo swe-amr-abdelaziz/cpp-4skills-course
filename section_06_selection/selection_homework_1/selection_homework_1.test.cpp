@@ -104,3 +104,38 @@ TEST(Problem3Test, given_3_negative_integers_than_print_max_among_all)
     EXPECT_EQ(output, -10);
 }
 
+TEST(Problem4Test, given_x_and_5_numbers_then_print_2_values_test_case_1)
+{
+    string output = getFunctionOutput(problem4, "10 1 2 3 4 5");
+    EXPECT_EQ(output, "5 0");
+}
+
+TEST(Problem4Test, given_x_and_5_numbers_then_print_2_values_test_case_2)
+{
+    string output = getFunctionOutput(problem4, "10 300 2 3 4 5");
+    EXPECT_EQ(output, "4 1");
+}
+
+TEST(Problem4Test, given_x_and_5_numbers_then_print_2_values_test_case_3)
+{
+    string output = getFunctionOutput(problem4, "10 300 2 3 4 200");
+    EXPECT_EQ(output, "3 2");
+}
+
+TEST(Problem4Test, given_x_and_5_numbers_then_print_2_values_test_case_4)
+{
+    string output = getFunctionOutput(problem4, "10 300 1 5 100 200");
+    EXPECT_EQ(output, "2 3");
+}
+
+TEST(Problem4Test, given_x_and_5_numbers_then_print_2_values_test_case_5)
+{
+    string output = getFunctionOutput(problem4, "10 300 10 50 100 200");
+    EXPECT_EQ(output, "1 4");
+}
+
+TEST(Problem4Test, given_x_and_5_numbers_then_print_2_values_test_case_6)
+{
+    string output = getFunctionOutput(problem4, "10 300 100 50 100 200");
+    EXPECT_EQ(output, "0 5");
+}
