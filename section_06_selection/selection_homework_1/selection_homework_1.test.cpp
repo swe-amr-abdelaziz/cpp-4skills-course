@@ -38,3 +38,39 @@ TEST(Problem1Test, given_1st_number_even_2nd_number_odd_then_print_their_subtrac
     EXPECT_EQ(output, 9);
 }
 
+TEST(Problem2Test, given_3_integers_then_print_them_ordered_ascending_test_case_1)
+{
+    string output = getFunctionOutput(problem2, "1 2 3");
+    EXPECT_EQ(output, "1 2 3");
+}
+
+TEST(Problem2Test, given_3_integers_then_print_them_ordered_ascending_test_case_2)
+{
+    string output = getFunctionOutput(problem2, "1 3 2");
+    EXPECT_EQ(output, "1 2 3");
+}
+
+TEST(Problem2Test, given_3_integers_then_print_them_ordered_ascending_test_case_3)
+{
+    string output = getFunctionOutput(problem2, "2 1 3");
+    EXPECT_EQ(output, "1 2 3");
+}
+
+TEST(Problem2Test, given_3_integers_then_print_them_ordered_ascending_test_case_4)
+{
+    string output = getFunctionOutput(problem2, "2 3 1");
+    EXPECT_EQ(output, "1 2 3");
+}
+
+TEST(Problem2Test, given_3_integers_then_print_them_ordered_ascending_test_case_5)
+{
+    string output = getFunctionOutput(problem2, "3 1 2");
+    EXPECT_EQ(output, "1 2 3");
+}
+
+TEST(Problem2Test, given_3_integers_then_print_them_ordered_ascending_test_case_6)
+{
+    string output = getFunctionOutput(problem2, "3 2 1");
+    EXPECT_EQ(output, "1 2 3");
+}
+
