@@ -22,3 +22,31 @@ void problem1()
         cout << a - b;
 }
 
+void problem2()
+{
+    // Sort 3 numbers
+    int a, b, c, tmp;
+    cin >> a >> b >> c;
+
+    if (b > c)
+    {
+        tmp = b;
+        b   = c;
+        c   = tmp;
+    }
+    if (a > b)
+    {
+        tmp = a;
+        a   = b;
+        b   = tmp;
+    }
+    if (b > c)
+    {
+        tmp = b;
+        b   = c;
+        c   = tmp;
+    }
+
+    cout << a << " " << b << " " << c;
+}
+
