@@ -80,6 +80,12 @@ TEST(Problem3Test, given_3_integers_all_less_than_100_then_print_max_among_all)
     EXPECT_EQ(output, 30);
 }
 
+TEST(Problem3Test, given_3_integers_all_less_than_100_then_print_max_among_all_2)
+{
+    int output = stoi(getFunctionOutput(problem3, "10 30 50"));
+    EXPECT_EQ(output, 50);
+}
+
 TEST(Problem3Test, given_3_integers_2_of_them_less_than_100_then_print_max_among_2_integers)
 {
     int output = stoi(getFunctionOutput(problem3, "22 90 115"));
