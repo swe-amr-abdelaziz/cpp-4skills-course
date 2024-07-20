@@ -50,3 +50,32 @@ void problem2()
     cout << a << " " << b << " " << c;
 }
 
+void problem3()
+{
+    // Maximum but constrained
+    int a, b, c;
+    int result{-1};
+    bool foundNumLT100{false};
+    cin >> a >> b >> c;
+
+    if (a < 100 && (!foundNumLT100 || a > result))
+    {
+        result        = a;
+        foundNumLT100 = true;
+    }
+    if (b < 100 && (!foundNumLT100 || b > result))
+    {
+        result        = b;
+        foundNumLT100 = true;
+    }
+    if (c < 100 && (!foundNumLT100 || c > result))
+    {
+        result        = c;
+        foundNumLT100 = true;
+    }
+    if (!foundNumLT100)
+        result = -1;
+
+    cout << result;
+}
+
