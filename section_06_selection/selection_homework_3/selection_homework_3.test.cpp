@@ -62,3 +62,62 @@ TEST(Problem1Test, given_three_intervals_with_three_interval_intersection_as_poi
     EXPECT_EQ(output, 3);
 }
 
+TEST(Problem2Test, two_intervals_no_intersection)
+{
+    int output = stoi(getFunctionOutput(problem2, "1 15 20 30"));
+    EXPECT_EQ(output, -1);
+}
+
+TEST(Problem2Test, two_intervals_no_intersection_reversed)
+{
+    int output = stoi(getFunctionOutput(problem2, "20 30 1 15"));
+    EXPECT_EQ(output, -1);
+}
+
+TEST(Problem2Test, two_intervals_full_intersection_test_case_1)
+{
+    string output = getFunctionOutput(problem2, "1 6 1 6");
+    EXPECT_EQ(output, "1 6");
+}
+
+TEST(Problem2Test, two_intervals_full_intersection_test_case_2)
+{
+    string output = getFunctionOutput(problem2, "1 6 1 3");
+    EXPECT_EQ(output, "1 3");
+}
+
+TEST(Problem2Test, two_intervals_with_intersection_test_case_1)
+{
+    string output = getFunctionOutput(problem2, "1 6 3 8");
+    EXPECT_EQ(output, "3 6");
+}
+
+TEST(Problem2Test, two_intervals_with_intersection_test_case_2)
+{
+    string output = getFunctionOutput(problem2, "1 6 6 8");
+    EXPECT_EQ(output, "6 6");
+}
+
+TEST(Problem2Test, two_intervals_with_intersection_test_case_3)
+{
+    string output = getFunctionOutput(problem2, "3 8 1 6");
+    EXPECT_EQ(output, "3 6");
+}
+
+TEST(Problem2Test, two_intervals_with_intersection_test_case_4)
+{
+    string output = getFunctionOutput(problem2, "1 6 2 3");
+    EXPECT_EQ(output, "2 3");
+}
+
+TEST(Problem2Test, two_intervals_with_intersection_test_case_5)
+{
+    string output = getFunctionOutput(problem2, "-20 -10 -15 0");
+    EXPECT_EQ(output, "-15 -10");
+}
+
+TEST(Problem2Test, two_intervals_with_intersection_test_case_6)
+{
+    string output = getFunctionOutput(problem2, "1 1 1 1");
+    EXPECT_EQ(output, "1 1");
+}
