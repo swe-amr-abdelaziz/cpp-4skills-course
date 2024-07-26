@@ -21,3 +21,19 @@ void problem1()
     cout << intersections;
 }
 
+void problem2()
+{
+    // Two Intervals Intersection
+    int s1, e1, s2, e2;
+    cin >> s1 >> e1 >> s2 >> e2;
+
+    bool noIntersection{e1 < s2 || e2 < s1};
+    if (noIntersection)
+        cout << -1;
+    else
+    {
+        int start = s1 > s2 ? s1 : s2;
+        int end   = e1 < e2 ? e1 : e2;
+        cout << start << " " << end;
+    }
+}
