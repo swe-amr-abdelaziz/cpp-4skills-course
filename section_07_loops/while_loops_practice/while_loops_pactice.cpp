@@ -48,3 +48,25 @@ void problem_3()
     cout << result;
 }
 
+void problem_4()
+{
+    // Nested loop
+    int t;
+    cin >> t;
+
+    while (t--)
+    {
+        int num;
+        cin >> num;
+        int result{0};
+        int originalNum{num};
+
+        while (num)
+        {
+            result += num;
+            num--;
+        }
+
+        cout << "Sum from " << 1 << " to " << originalNum << " = " << result << '\n';
+    }
+}
