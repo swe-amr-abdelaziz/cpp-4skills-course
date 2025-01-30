@@ -15,3 +15,17 @@ void problem_1()
     }
 }
 
+void problem_2()
+{
+    // Power Function
+    int num;
+    int pow;
+    cin >> num >> pow;
+    int result = 1;
+
+    while (pow--)
+        result *= num;
+
+    cout << result;
+}
+
