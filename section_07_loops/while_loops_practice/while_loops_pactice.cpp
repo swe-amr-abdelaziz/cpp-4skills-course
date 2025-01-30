@@ -29,3 +29,22 @@ void problem_2()
     cout << result;
 }
 
+void problem_3()
+{
+    // Number of digits
+    int num;
+    int result{0};
+    cin >> num;
+
+    if (num == 0)
+        result++;
+
+    while (num)
+    {
+        result++;
+        num /= 10;
+    }
+
+    cout << result;
+}
+
