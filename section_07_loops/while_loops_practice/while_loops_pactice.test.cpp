@@ -62,3 +62,27 @@ TEST(Problem1Test, given_negative_number_get_nothing)
     EXPECT_EQ(output.size(), expected.size());
 }
 
+TEST(Problem2Test, given_two_numbers_get_power_function_result_test_case_1)
+{
+    int output = stoi(getFunctionOutput(problem_2, "2 5"));
+    EXPECT_EQ(output, 32);
+}
+
+TEST(Problem2Test, given_two_numbers_get_power_function_result_test_case_2)
+{
+    int output = stoi(getFunctionOutput(problem_2, "5 3"));
+    EXPECT_EQ(output, 125);
+}
+
+TEST(Problem2Test, given_two_numbers_get_power_function_result_test_case_3)
+{
+    int output = stoi(getFunctionOutput(problem_2, "100 1"));
+    EXPECT_EQ(output, 100);
+}
+
+TEST(Problem2Test, given_two_numbers_get_power_function_result_test_case_4)
+{
+    int output = stoi(getFunctionOutput(problem_2, "100 0"));
+    EXPECT_EQ(output, 1);
+}
+
