@@ -86,3 +86,27 @@ TEST(Problem2Test, given_two_numbers_get_power_function_result_test_case_4)
     EXPECT_EQ(output, 1);
 }
 
+TEST(Problem3Test, given_number_get_its_number_of_digits_test_case_1)
+{
+    int output = stoi(getFunctionOutput(problem_3, "123"));
+    EXPECT_EQ(output, 3);
+}
+
+TEST(Problem3Test, given_number_get_its_number_of_digits_test_case_2)
+{
+    int output = stoi(getFunctionOutput(problem_3, "0"));
+    EXPECT_EQ(output, 1);
+}
+
+TEST(Problem3Test, given_number_get_its_number_of_digits_test_case_3)
+{
+    int output = stoi(getFunctionOutput(problem_3, "-12345"));
+    EXPECT_EQ(output, 5);
+}
+
+TEST(Problem3Test, given_number_get_its_number_of_digits_test_case_4)
+{
+    int output = stoi(getFunctionOutput(problem_3, to_string(INT_MIN)));
+    EXPECT_EQ(output, 10);
+}
+
