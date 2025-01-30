@@ -110,3 +110,37 @@ TEST(Problem3Test, given_number_get_its_number_of_digits_test_case_4)
     EXPECT_EQ(output, 10);
 }
 
+TEST(Problem4Test, given_t_test_cases_and_number_for_each_test_case_1)
+{
+    vector<string> output =
+        getFunctionOutputSplitted<string>(problem_4, "3 3 4 5");
+    vector<string> expected = {
+        "Sum from 1 to 3 = 6",
+        "Sum from 1 to 4 = 10",
+        "Sum from 1 to 5 = 15",
+    };
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(output[i], expected[i]);
+}
+
+TEST(Problem4Test, given_t_test_cases_and_number_for_each_test_case_2)
+{
+    vector<string> output =
+        getFunctionOutputSplitted<string>(problem_4, "4 1 10 100 1000");
+    vector<string> expected = {
+        "Sum from 1 to 1 = 1",
+        "Sum from 1 to 10 = 55",
+        "Sum from 1 to 100 = 5050",
+        "Sum from 1 to 1000 = 500500",
+    };
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(output[i], expected[i]);
+}
+
+int main(int argc, char** argv)
+{
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
