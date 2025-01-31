@@ -47,3 +47,22 @@ void problem_3()
     }
 }
 
+void problem_4()
+{
+    // Print face down left angled triangle
+    int row;
+    cin >> row;
+    int col{row};
+
+    while (col)
+    {
+        int cursor = col;
+
+        while (cursor--)
+            cout << '*';
+
+        cout << '\n';
+        col--;
+    }
+}
+
