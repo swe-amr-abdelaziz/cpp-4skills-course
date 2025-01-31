@@ -17,3 +17,14 @@ void problem_1()
     cout << y << '\n';
 }
 
+void problem_2()
+{
+    // Line Of Characters
+    int num;
+    char ch;
+    cin >> num >> ch;
+
+    while (num--)
+        cout << ch;
+}
+
