@@ -70,3 +70,26 @@ void problem_3()
     }
 }
 
+void problem_4()
+{
+    // Minimum of values
+    int T;
+    cin >> T;
+
+    while (T--)
+    {
+        int N;
+        int min;
+        int tmp;
+        cin >> N >> min;
+
+        while (--N)
+        {
+            cin >> tmp;
+            if (min > tmp)
+                min = tmp;
+        }
+
+        cout << min << '\n';
+    }
+}
