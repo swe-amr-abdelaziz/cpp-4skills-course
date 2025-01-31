@@ -133,3 +133,31 @@ TEST(Problem3Test, given_number_prints_special_multiples_2_test_case_4)
         EXPECT_EQ(stoi(output[i]), expected[i]);
 }
 
+TEST(Problem4Test, given_numbers_prints_minimum_values_test_case_1)
+{
+    vector<string> output = getFunctionOutputSplitted<string>(problem_4,
+                                                              "2 6 10 50 20 70 "
+                                                              "30 4 3 10 5 30");
+    vector<int> expected  = {4, 5};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(stoi(output[i]), expected[i]);
+}
+
+TEST(Problem4Test, given_numbers_prints_minimum_values_test_case_2)
+{
+    vector<string> output = getFunctionOutputSplitted<string>(problem_4,
+                                                              "3 6 10 50 20 70 "
+                                                              "30 4 3 10 5 30 "
+                                                              "1 20");
+    vector<int> expected  = {4, 5, 20};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(stoi(output[i]), expected[i]);
+}
+
+int main(int argc, char** argv)
+{
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
