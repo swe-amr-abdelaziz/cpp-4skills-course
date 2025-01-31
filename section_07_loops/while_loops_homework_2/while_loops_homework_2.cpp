@@ -38,3 +38,18 @@ void problem_1()
     }
 }
 
+void problem_2()
+{
+    // Special multiples 1
+    int n;
+    int i{0};
+    cin >> n;
+
+    while (i <= n)
+    {
+        if (i % 8 == 0 || (i % 4 == 0 && i % 3 == 0))
+            cout << i << ' ';
+        i++;
+    }
+}
+
