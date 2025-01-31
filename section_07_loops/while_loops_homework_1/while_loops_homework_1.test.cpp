@@ -95,3 +95,31 @@ TEST(Problem1Test, given_two_equal_numbers_print_any_of_them)
         EXPECT_EQ(stoi(output[i]), expected[i]);
 }
 
+TEST(Problem2Test, given_number_and_character_prints_the_character_n_times_test_case_1)
+{
+    string output   = getFunctionOutput(problem_2, "5 Y");
+    string expected = "YYYYY";
+    EXPECT_EQ(output, expected);
+}
+
+TEST(Problem2Test, given_number_and_character_prints_the_character_n_times_test_case_2)
+{
+    string output   = getFunctionOutput(problem_2, "3 #");
+    string expected = "###";
+    EXPECT_EQ(output, expected);
+}
+
+TEST(Problem2Test, given_number_and_character_prints_the_character_n_times_test_case_3)
+{
+    string output   = getFunctionOutput(problem_2, "7 7");
+    string expected = "7777777";
+    EXPECT_EQ(output, expected);
+}
+
+TEST(Problem2Test, given_number_and_character_prints_the_character_n_times_test_case_4)
+{
+    string output   = getFunctionOutput(problem_2, "0 #");
+    string expected = "";
+    EXPECT_EQ(output, expected);
+}
+
