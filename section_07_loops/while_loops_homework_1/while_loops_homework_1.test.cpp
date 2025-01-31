@@ -190,3 +190,47 @@ TEST(Problem4Test, given_number_prints_face_down_left_angled_triangle_test_case_
         EXPECT_EQ(output[i], expected[i]);
 }
 
+TEST(Problem5Test, given_six_followed_by_six_numbers_prints_two_special_averages)
+{
+    vector<string> output =
+        getFunctionOutputSplitted<string>(problem_5, "6 10 100 20 200 30 600", ' ');
+    vector<double> expected = {20, 300};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(stod(output[i]), expected[i]);
+}
+
+TEST(Problem5Test, given_five_followed_by_five_numbers_prints_two_special_averages)
+{
+    vector<string> output =
+        getFunctionOutputSplitted<string>(problem_5, "5 10 100 20 200 30", ' ');
+    vector<double> expected = {20, 150};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(stod(output[i]), expected[i]);
+}
+
+TEST(Problem5Test, given_two_followed_by_two_numbers_prints_two_special_averages)
+{
+    vector<string> output =
+        getFunctionOutputSplitted<string>(problem_5, "2 10 100", ' ');
+    vector<double> expected = {10, 100};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(stod(output[i]), expected[i]);
+}
+
+TEST(Problem5Test, given_zero_followed_by_zero_numbers_prints_two_zeros)
+{
+    vector<string> output = getFunctionOutputSplitted<string>(problem_5, "0", ' ');
+    vector<double> expected = {0, 0};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(stod(output[i]), expected[i]);
+}
+
+int main(int argc, char** argv)
+{
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
