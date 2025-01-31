@@ -1,6 +1,5 @@
 #include "while_loops_homework_1.h"
 #include <gtest/gtest.h>
-#include <iostream>
 #include <sstream>
 #include <string>
 #include <vector>
