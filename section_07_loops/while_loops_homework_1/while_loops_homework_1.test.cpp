@@ -28,3 +28,70 @@ vector<T> getFunctionOutputSplitted(void (*func)(), string input, char delimiter
     return vec;
 }
 
+TEST(Problem1Test, given_two_positive_numbers_sorted_ascending_print_range_in_between)
+{
+    vector<string> output = getFunctionOutputSplitted<string>(problem_1, "3 7");
+    vector<int> expected  = {3, 4, 5, 6, 7};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(stoi(output[i]), expected[i]);
+}
+
+TEST(Problem1Test, given_two_positive_numbers_sorted_descending_print_range_in_between)
+{
+    vector<string> output = getFunctionOutputSplitted<string>(problem_1, "6 1");
+    vector<int> expected  = {6, 5, 4, 3, 2, 1};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(stoi(output[i]), expected[i]);
+}
+
+TEST(Problem1Test, given_two_negative_numbers_sorted_ascending_print_range_in_between)
+{
+    vector<string> output =
+        getFunctionOutputSplitted<string>(problem_1, "-20 -17");
+    vector<int> expected = {-20, -19, -18, -17};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(stoi(output[i]), expected[i]);
+}
+
+TEST(Problem1Test, given_two_negative_numbers_sorted_descending_print_range_in_between)
+{
+    vector<string> output =
+        getFunctionOutputSplitted<string>(problem_1, "-4 -12");
+    vector<int> expected = {-4, -5, -6, -7, -8, -9, -10, -11, -12};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(stoi(output[i]), expected[i]);
+}
+
+TEST(Problem1Test, given_positive_and_negative_sorted_ascending_print_range_in_between)
+{
+    vector<string> output =
+        getFunctionOutputSplitted<string>(problem_1, " -2 3 ");
+    vector<int> expected = {-2, -1, 0, 1, 2, 3};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(stoi(output[i]), expected[i]);
+}
+
+TEST(Problem1Test, given_positive_and_negative_sorted_descending_print_range_in_between)
+{
+    vector<string> output =
+        getFunctionOutputSplitted<string>(problem_1, " 4 -2 ");
+    vector<int> expected = {4, 3, 2, 1, 0, -1, -2};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(stoi(output[i]), expected[i]);
+}
+
+TEST(Problem1Test, given_two_equal_numbers_print_any_of_them)
+{
+    vector<string> output = getFunctionOutputSplitted<string>(problem_1, "5 5");
+    vector<int> expected  = {5};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(stoi(output[i]), expected[i]);
+}
+
