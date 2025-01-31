@@ -28,3 +28,22 @@ void problem_2()
         cout << ch;
 }
 
+void problem_3()
+{
+    // Print left angled triangle
+    int row;
+    cin >> row;
+    int col{0};
+
+    while (col < row)
+    {
+        int cursor = col + 1;
+
+        while (cursor--)
+            cout << '*';
+
+        cout << '\n';
+        col++;
+    }
+}
+
