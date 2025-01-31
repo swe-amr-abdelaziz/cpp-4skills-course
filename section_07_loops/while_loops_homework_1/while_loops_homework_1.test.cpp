@@ -156,3 +156,37 @@ TEST(Problem3Test, given_number_prints_left_angled_triangle_test_case_3)
         EXPECT_EQ(output[i], expected[i]);
 }
 
+TEST(Problem4Test, given_number_prints_face_down_left_angled_triangle_test_case_1)
+{
+    vector<string> output   = getFunctionOutputSplitted<string>(problem_4, "6");
+    vector<string> expected = {
+        "******",
+        "*****",
+        "****",
+        "***",
+        "**",
+        "*",
+    };
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(output[i], expected[i]);
+}
+
+TEST(Problem4Test, given_number_prints_face_down_left_angled_triangle_test_case_2)
+{
+    vector<string> output   = getFunctionOutputSplitted<string>(problem_4, "1");
+    vector<string> expected = {"*"};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(output[i], expected[i]);
+}
+
+TEST(Problem4Test, given_number_prints_face_down_left_angled_triangle_test_case_3)
+{
+    vector<string> output   = getFunctionOutputSplitted<string>(problem_4, "0");
+    vector<string> expected = {};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(output[i], expected[i]);
+}
+
