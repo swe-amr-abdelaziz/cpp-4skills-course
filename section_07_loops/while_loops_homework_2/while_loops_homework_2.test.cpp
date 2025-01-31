@@ -97,3 +97,39 @@ TEST(Problem2Test, given_number_prints_special_multiples_1_test_case_3)
         EXPECT_EQ(stoi(output[i]), expected[i]);
 }
 
+TEST(Problem3Test, given_number_prints_special_multiples_2_test_case_1)
+{
+    vector<string> output = getFunctionOutputSplitted<string>(problem_3, "0", ' ');
+    vector<int> expected = {};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(stoi(output[i]), expected[i]);
+}
+
+TEST(Problem3Test, given_number_prints_special_multiples_2_test_case_2)
+{
+    vector<string> output = getFunctionOutputSplitted<string>(problem_3, "1", ' ');
+    vector<int> expected = {3};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(stoi(output[i]), expected[i]);
+}
+
+TEST(Problem3Test, given_number_prints_special_multiples_2_test_case_3)
+{
+    vector<string> output = getFunctionOutputSplitted<string>(problem_3, "4", ' ');
+    vector<int> expected = {3, 6, 9, 15};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(stoi(output[i]), expected[i]);
+}
+
+TEST(Problem3Test, given_number_prints_special_multiples_2_test_case_4)
+{
+    vector<string> output = getFunctionOutputSplitted<string>(problem_3, "11", ' ');
+    vector<int> expected = {3, 6, 9, 15, 18, 21, 27, 30, 33, 39, 42};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(stoi(output[i]), expected[i]);
+}
+
