@@ -53,3 +53,20 @@ void problem_2()
     }
 }
 
+void problem_3()
+{
+    // Special multiples 2
+    int n;
+    int i{0};
+    cin >> n;
+
+    while (n--)
+    {
+        i += 3;
+        if (i % 4 == 0)
+            n++;
+        else
+            cout << i << ' ';
+    }
+}
+
