@@ -66,3 +66,29 @@ void problem_4()
     }
 }
 
+void problem_5()
+{
+    // Special Average
+    int T;
+    cin >> T;
+
+    double avgOdd{0};
+    double avgEven{0};
+    int iterator{0};
+    int num;
+
+    while (iterator < T)
+    {
+        cin >> num;
+        int factor = iterator / 2;
+
+        if (iterator % 2 == 0)
+            avgOdd = (avgOdd * factor + num) / (factor + 1);
+        else
+            avgEven = (avgEven * factor + num) / (factor + 1);
+
+        iterator++;
+    }
+
+    cout << avgOdd << " " << avgEven;
+}
