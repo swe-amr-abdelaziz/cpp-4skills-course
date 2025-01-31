@@ -123,3 +123,36 @@ TEST(Problem2Test, given_number_and_character_prints_the_character_n_times_test_
     EXPECT_EQ(output, expected);
 }
 
+TEST(Problem3Test, given_number_prints_left_angled_triangle_test_case_1)
+{
+    vector<string> output   = getFunctionOutputSplitted<string>(problem_3, "5");
+    vector<string> expected = {
+        "*",
+        "**",
+        "***",
+        "****",
+        "*****",
+    };
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(output[i], expected[i]);
+}
+
+TEST(Problem3Test, given_number_prints_left_angled_triangle_test_case_2)
+{
+    vector<string> output   = getFunctionOutputSplitted<string>(problem_3, "1");
+    vector<string> expected = {"*"};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(output[i], expected[i]);
+}
+
+TEST(Problem3Test, given_number_prints_left_angled_triangle_test_case_3)
+{
+    vector<string> output   = getFunctionOutputSplitted<string>(problem_3, "0");
+    vector<string> expected = {};
+    ASSERT_EQ(output.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); i++)
+        EXPECT_EQ(output[i], expected[i]);
+}
+
